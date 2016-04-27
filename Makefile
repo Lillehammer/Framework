@@ -17,7 +17,7 @@ push:
 	cd ../Deployment && $(PUSH); echo
 	cd ../Mission && $(PUSH); echo
 	cd ../Mapping && $(PUSH); echo
-	cd ../Textures && $(PUSH); echo
+	cd ../Texturing && $(PUSH); echo
 	cd ../Upstream && $(PUSH); echo
 	cd ../Framework && $(PUSH); echo
 	cd ../Sounds && $(PUSH); echo
