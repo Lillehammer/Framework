@@ -12,6 +12,8 @@ update:
 	cd ../Upstream && $(UPDATE)
 	cd ../Framework && $(UPDATE)
 	cd ../Sounds && $(UPDATE)
+	cd ../Economy && $(UPDATE)
+	cd ../Lillehammer.github.io && $(UPDATE)
 
 push:
 	cd ../Deployment && $(PUSH); echo
@@ -21,4 +23,6 @@ push:
 	cd ../Upstream && $(PUSH); echo
 	cd ../Framework && $(PUSH); echo
 	cd ../Sounds && $(PUSH); echo
+	cd ../Economy && $(PUSH); echo
+	cd ../Lillehammer.github.io && $(PUSH); echo
 
