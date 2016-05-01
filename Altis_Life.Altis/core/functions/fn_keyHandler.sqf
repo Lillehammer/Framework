@@ -100,6 +100,84 @@ switch (_code) do {
 				player selectWeapon life_curWep_h;
 			};
 		};
+
+		//
+		// H Taste fuer Polizei
+		//
+		if (playerSide == west) then {
+			if (player GVAR ["restrained",false]) then {
+				if (vehicle player != player) then {
+					_veh = vehicle player;
+					[_veh] remoteExec ["life_fnc_copSiren2",RCLIENT];
+				};
+			};
+		};
+
+		//
+		// H Taste fuer Zivilisten
+		//
+		if (playerSide == civilian) then {
+			if (vehicle player == player) then {
+				if(!life_action_inUse) then {
+					if (player GVAR ["restrained",false]) then {
+						hint "Du bist gefesselt, du kannst das jetzt nicht tun.";
+					} else {
+						_veh = cursorTarget;
+						_locked = locked _veh;
+						if(EQUAL(_locked,0)) then {
+							{
+								if (_x != player) then {
+									[_x] remoteExecCall ["life_fnc_pulloutVeh",_x];
+								};
+							} forEach crew cursorTarget;
+						};
+					};
+				};
+			};
+		};
+
+		//
+		// H Taste fuer Rettungseinsatz
+		//
+		if (playerSide == independent) then {
+			if (_shift) then {
+				if(!life_action_inUse) then {
+
+					[true,"waterBottle",2] call life_fnc_handleInv;
+					[true,"apple",2]       call life_fnc_handleInv;
+					[true,"peach",2]       call life_fnc_handleInv;
+					[true,"fuelFull",1]    call life_fnc_handleInv;
+					[true,"lockpick",1]    call life_fnc_handleInv;
+					[true,"boltcutter",1]  call life_fnc_handleInv;
+
+					if (vehicle player == player) then {
+						player addItem "ToolKit";
+					} else {
+						//
+						// vehicle cargo for medics
+						//
+						// clearItemCargoGlobal vehicle player;
+						// clearBackpackCargoGlobal vehicle player;
+						//
+
+						vehicle player addItemCargoGlobal ["Medikit", 1];
+						vehicle player addItemCargoGlobal ["ToolKit", 1];
+
+						vehicle player addItemCargoGlobal ["NVGoggles", 1];
+						vehicle player addItemCargoGlobal ["ItemGPS", 1];
+
+						vehicle player addItemCargoGlobal ["SmokeShellRed", 4];
+						vehicle player addItemCargoGlobal ["Chemlight_red", 4];
+						
+						vehicle player addItemCargoGlobal ["U_B_Wetsuit", 1];
+						vehicle player addItemCargoGlobal ["V_RebreatherB", 1];
+						
+						vehicle player addBackpackCargoGlobal ["B_Carryall_oucamo", 1];
+					};
+				};
+			};
+		};
+
 	};
 
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
@@ -157,11 +235,11 @@ switch (_code) do {
 		};
 	};
 
-	//L Key?
+	//L Key
 	case 38: {
 		//If cop run checks for turning lights on.
 		if(_shift && playerSide in [west,independent]) then {
-			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F","C_Hatchback_01_sport_F","B_Heli_Light_01_F","B_Heli_Transport_01_F"]) then {
+			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F","C_Hatchback_01_sport_F","B_Heli_Light_01_F","B_Heli_Transport_01_F","I_MRAP_03_F","B_Truck_01_mover_F"]) then {
 				if(!isNil {vehicle player GVAR "lights"}) then {
 					if(playerSide == west) then {
 						[vehicle player] call life_fnc_sirenLights;

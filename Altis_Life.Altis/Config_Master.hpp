@@ -50,9 +50,9 @@ class Life_Settings {
     bank_med = 100000; //Amount of cash on bank for new medics
 
     /* Paycheck Amount */
-    paycheck_cop = 5000; //Payment for cops
+    paycheck_cop = 10000; //Payment for cops
     paycheck_civ = 350; //Payment for civillians
-    paycheck_med = 10000; //Payment for medics
+    paycheck_med = 20000; //Payment for medics
 
     /* Federal Reserve settings */
     noatm_timer = 10; //Time in minutes that players won't be able to deposit his money after selling stolen gold

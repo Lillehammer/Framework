@@ -135,6 +135,30 @@ class VirtualShops {
         level[] = { "", "", -1, "" };
         items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "fuelFull", "defusekit" };
     };
+	
+    class med {
+        name = "STR_Shops_Med";
+        side = "med";
+        license = "";
+        level[] = { "", "", -1, "" };
+        items[] = { "waterBottle", "rabbit", "apple", "peach", "fuelFull", "lockpick", "boltcutter" };
+    };
+
+    class pharmacy {
+        name = "STR_Shops_Pharmacy";
+        side = "civ";
+        license = "";
+        level[] = { "", "", -1, "" };
+        items[] = { "waterBottle" };
+    };
+	
+    class admin {
+        name = "STR_Shops_Admin";
+        side = "admin";
+        license = "";
+        level[] = { "", "", -1, "" };
+        items[] = { "money" };
+    };
 };
 
 /*
@@ -151,6 +175,17 @@ class VirtualShops {
 */
 class VirtualItems {
     //Virtual Items
+
+	class money {
+        variable = "money";
+        displayName = "STR_Item_Money";
+        weight = 1;
+        buyPrice = 1000;
+        sellPrice = -1;
+        illegal = false;
+        edible = -1;
+        icon = "custom\icons\ico_money.paa";
+    };
 
     //Misc
     class pickaxe {
