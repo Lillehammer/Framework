@@ -2190,6 +2190,14 @@
       <Portuguese>%1 foi tazed por %2</Portuguese>
       <Polish>%1 został potraktowany paralizatorem przez %2</Polish>
     </Key>
+    <Key ID="STR_NOTF_Innocent">
+      <Original>%2 has murdered the unarmed civilian %1</Original>
+      <German>%2 hat %1 ermordet obwohl dieser unbewaffnet war</German>
+    </Key>	
+    <Key ID="STR_NOTF_Murdered">
+      <Original>%1 was killed by %2 without holding a weapon in his hands</Original>
+      <German>%2 hat %1 getötet als dieser keine Waffe in der Hand hatte</German>
+    </Key>
     <Key ID="STR_NOTF_VehContraband">
       <Original>A vehicle was searched and has $%1 worth of drugs / contraband.</Original>
       <German>Ein Fahrzeug wurde durchsucht und es wurden Drogen / Schmuggelware im Wert von $%1 gefunden.</German>
@@ -4677,6 +4685,10 @@
       <Portuguese>Respawn Disponível em: %1</Portuguese>
       <Polish>Odrodzenie możliwe za: %1</Polish>
     </Key>
+    <Key ID="STR_Medic_RespawnWait">
+      <Original>EMS has been notified. Please wait for them to arrive!</Original>
+      <German>Der Notarzt ist benachrichtigt. Bitte warten Sie auf seine Ankunft!</German>
+	</Key>
     <Key ID="STR_Medic_Respawn_2">
       <Original>You can now respawn</Original>
       <German>Du kannst nun respawnen</German>

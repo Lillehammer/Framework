@@ -93,5 +93,5 @@ _role7names = ["... ab ins Getümmel!"];
 	[_role7, _role7names]
 ];
 
-_ui = "osefStatusBar" call BIS_fnc_rscLayer;
-_ui cutRsc["osefStatusBar","PLAIN"];
+// _ui = "osefStatusBar" call BIS_fnc_rscLayer;
+// _ui cutRsc["osefStatusBar","PLAIN"];
