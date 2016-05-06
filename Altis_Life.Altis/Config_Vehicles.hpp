@@ -42,6 +42,7 @@ class CarShops {
         side = "med";
         vehicles[] = {
             { "C_Offroad_01_F", 10000, { "" }, { "", "", -1 } },
+			{ "C_Van_01_box_F", 10000, { "" }, { "", "", -1 } },
             { "I_Truck_02_medical_F", 25000, { "" }, { "", "", -1 } },
             { "O_Truck_03_medical_F", 45000, { "" }, { "", "", -1 } },
             { "B_Truck_01_medical_F", 60000, { "" }, { "", "", -1 } },
@@ -749,6 +750,10 @@ class LifeCfgVehicles {
             } },
             { "Red", "civ", {
                 "\a3\soft_f_gamma\Van_01\Data\van_01_ext_red_co.paa"
+            } },
+            { "RTW", "med", {
+				"textures\vehicles\med\boxer\van_01_ext_co_002.jpg",
+                "textures\vehicles\med\boxer\van_01_adds_co_017.jpg"
             } }
         };
     };
