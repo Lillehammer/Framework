@@ -24,13 +24,13 @@ class Life_Settings {
 
     /* Revive system settings */
     revive_cops = false; //true to enable cops the ability to revive everyone or false for only medics/ems.
-    revive_fee = 15000; //Revive fee that players have to pay and medics / EMS are rewarded
+    revive_fee = 45000; //Revive fee that players have to pay and medics / EMS are rewarded
 
     /* House related settings */
     house_limit = 5; //Maximum amount of houses a player can own.
 
     /* Gang related settings */
-    gang_price = 75000; //Price for creating a gang, remember they are persistent so keep it reasonable to avoid millions of gangs.
+    gang_price = 1500000; //Price for creating a gang, remember they are persistent so keep it reasonable to avoid millions of gangs.
     gang_upgradeBase = 10000; //The base cost for upgrading slots in a gang
     gang_upgradeMultiplier = 2.5; //Not sure if in use?
 
@@ -51,7 +51,7 @@ class Life_Settings {
 
     /* Paycheck Amount */
     paycheck_cop = 10000; //Payment for cops
-    paycheck_civ = 350; //Payment for civillians
+    paycheck_civ = 700; //Payment for civillians
     paycheck_med = 20000; //Payment for medics
 
     /* Federal Reserve settings */

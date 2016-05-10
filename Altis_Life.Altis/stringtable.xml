@@ -60,6 +60,10 @@
       <Portuguese>Mercado Rebelde</Portuguese>
       <Polish>Market Rebeliantów</Polish>
     </Key>
+    <Key ID="STR_License_DVG">
+	  <Original>DVG Clan License</Original>
+	  <German>DVG Mitgliedslizenz</German>
+	</Key>
     <Key ID="STR_Shops_Gang">
       <Original>Gang Market</Original>
       <German>Gang Markt</German>
