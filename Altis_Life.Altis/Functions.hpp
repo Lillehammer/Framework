@@ -101,6 +101,9 @@ class Life_Client_Core
 		class gather {};
 		class gutAnimal {};
 		class removeContainer {};
+		class robShops {};
+		class robShops2 {};
+		class shopState {};
 	};
 
 	class Housing
